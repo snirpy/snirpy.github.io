@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import CourseCard from '../components/CourseCard.astro';
+
+const courses = [
+  { number: "0", title: "Python Introduction", pdfLink: "sujets/CousPython1_intro.pdf", codeLink: "https://github.com/snirpy/chp1" },
+  { number: "1", title: "Python Variables", pdfLink: "sujets/CousPython2_les_variables.pdf", codeLink: "https://github.com/snirpy/chp1" },
+  { number: "2", title: "Les Structures Conditionnelles", pdfLink: "sujets/CousPython3_Conditions.pdf", codeLink: "https://github.com/snirpy/cours3" },
+  { number: "3", title: "Les Boucles", pdfLink: "sujets/CousPython4_boucles.pdf", codeLink: "https://github.com/snirpy/cours4" },
+  { number: "4", title: "Traitement des Chaînes", pdfLink: "sujets/CousPython4_boucles.pdf", codeLink: "https://github.com/snirpy/cours5" },
+  { number: "5", title: "Les Fonctions", pdfLink: "sujets/CousPython5_fonctions.pdf", codeLink: "https://github.com/snirpy/cours6" },
+];
+---
+
+<Layout title="Cours Python CIEL">
+  <Navigation />
+  
+  <main>
+    <div class="hero">
+      <h1>Cours Python CIEL2</h1>
+      <p class="subtitle">
+        Cette page est destinée aux étudiants de deuxième année du BTS CIEL. 
+Vous y trouverez les liens de téléchargement des cours, des sujets des TP ainsi 
+que les propositions de correction.
+      </p>
+    </div>
+
+    <div class="courses-grid">
+      {courses.map(course => (
+        <CourseCard {...course} />
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 1rem 2rem 1rem;
+  }
+  .hero {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+  .subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    .courses-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

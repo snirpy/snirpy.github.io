@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 6rem 1rem 2rem 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 4rem;
+    }
+}

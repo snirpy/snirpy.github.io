@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Python CIEL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/courses.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">Python CIEL</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Cours</a>
+                <a href="/tp.html" class="nav-link">Travaux pratiques</a>
+                <a href="/devoirs.html" class="nav-link">Devoirs</a>
+                <a href="/mini-projets.html" class="nav-link">Mini projets</a>
+                <a href="/maths.html" class="nav-link">Maths</a>
+                <a href="/documentations.html" class="nav-link">Documentations</a>
+            </div>
+            <button class="mobile-menu-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <h1>Cours Python CIEL 2</h1>
+            <p class="subtitle">
+                Cette page est destinée aux étudiants de deuxième année du BTS CIEL. 
+                Vous y trouverez les liens de téléchargement des cours, des sujets des TP 
+                ainsi que les propositions de correction.
+                En cours de construction
+
+                <img src="travaux-en-cours.png" style="width: 40%; height: auto;">
+
+            </p>
+        </div>
+
+        <div class="courses-grid" id="coursesGrid"></div>
+    </main>
+
+    <script src="js/courses-data.js"></script>
+    <script src="js/course-card.js"></script>
+    <script src="js/mobile-menu.js"></script>
+</body>
+</html>

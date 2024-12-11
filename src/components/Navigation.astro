@@ -1,0 +1,64 @@
+---
+const links = [
+  { href: '/', text: 'Cours' },
+  { href: '/tp', text: 'Travaux pratiques' },
+  { href: '/devoirs', text: 'Devoirs' },
+  { href: '/mini-projets', text: 'Mini projets' },
+  { href: '/maths', text: 'Maths' },
+  { href: '/documentations', text: 'Documentations' },
+];
+---
+
+<nav>
+  <div class="nav-container">
+    <a href="/" class="logo">Python SNIR</a>
+    <div class="links">
+      {links.map(link => (
+        <a href={link.href} class="nav-link">{link.text}</a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    background: white;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-link:hover {
+    color: var(--primary);
+  }
+  @media (max-width: 768px) {
+    .links {
+      display: none;
+    }
+  }
+</style>
